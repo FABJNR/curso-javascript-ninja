@@ -100,26 +100,4 @@
   DOM.isNull = function isNull(param) {
     return DOM.is(param) === '[object Null]' || DOM.is(param) === '[object Undefined]';
   };
-
-  var $a = new DOM('[data-js="link"]');
-  console.log($a);
-
-  $a.forEach(function (item) {
-    console.log(item.firstChild.nodeValue);
-  });
-
-  var testMap = $a.map(function (item) {
-    return item.getAttribute('data-js');
-  });
-  console.log(testMap);
-
-  var testReduce = $a.reduce(function (acc, item, index) {
-    return acc + ' ' + item.getAttribute('data-js') + index;
-  }, '');
-  console.log(testReduce);
-
-  var testReduceRight = $a.reduceRight(function (acc, item, index) {
-    return acc + ' ' + item.getAttribute('data-js') + index;
-  }, '');
-  console.log(testReduceRight);
 })(window, document);
