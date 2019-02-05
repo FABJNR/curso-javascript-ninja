@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Challenge 28</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: white;
+      background: radial-gradient(circle, #fff 24%, #CCE);
+      background-size: cover;
+      font-family: sans-serif;
+      font-size: 100%;
+    }
+
+    #main {
+      margin: 0 auto;
+      width: 996px;
+    }
+
+    #main header h1 {
+      font-size: 2em;
+      line-height: 1.25em;
+    }
+
+    #main button,
+    #main input,
+    #main label,
+    #main span {
+      font-size: 1em;
+      line-height: 1.25em;
+    }
+
+    #main #form,
+    #main #result {
+      margin: 10px 0px;
+    }
+
+    #main #form input[type=text]{
+      border: solid 1px gray;
+      border-radius: 3px;
+      padding: 0px 5px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    #main #form button {
+      background-color:#6C73FA;
+      border: solid 1px #6C73FA;
+      border-radius: 3px;
+      color:#fff;
+      cursor: pointer;
+      padding: 0px 5px;
+      text-align: center;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    #main #form button:hover {
+      background-color: #2832ff;
+      border-color:#2832ff;
+      color: #fff;
+      transition:0.2s;
+    }
+
+    #main #result table {
+      text-align: left;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    #main #result table thead tr th {
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      border-top: 1px solid black;
+      padding: 5px;
+      width: 20%;
+    }
+
+    #main #result table thead tr th:first-child {
+      border-left: 1px solid black;
+    }
+
+    #main #result table tbody tr td {
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      padding: 5px;
+      width: 20%;
+    }
+
+    #main #result table tbody tr td:first-child {
+      border-left: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <h1>Consulta de CEP</h1>
+    </header>
+    <form id="form" data-js="form-cep">
+      <label>CEP:</label>
+      <input type="text" data-js="input-cep" maxlength="9" />
+      <button type="submit">Buscar</button>
+    </form>
+    <hr />
+    <div id="result">
+      <label data-js="status"></label>
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Logradouro</th>
+            <th>Bairro</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+            <th>CEP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span data-js="logradouro"></span></td>
+            <td><span data-js="bairro"></span></td>
+            <td><span data-js="estado"></span></td>
+            <td><span data-js="cidade"></span></td>
+            <td><span data-js="cep"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="challenge-28.js"></script>
+</body>
+</html>
